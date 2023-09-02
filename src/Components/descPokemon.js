@@ -5,7 +5,7 @@ function DescPokemon({ data }) {
   return (
     <>
       {!data ? (
-        <div className="row d-flex align-items-center">
+        <div className="row d-flex align-items-center mb-5">
           <div className="col text-center">
             <img
               className="img-fluid text-center w-75"

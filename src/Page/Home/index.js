@@ -85,9 +85,9 @@ function Home() {
             </div>
           </div>
 
-          <div className="container section p-5">
-            <div className="row row-cols-xs-1 row-cols-sm-1 row-cols-md-2">
-              <div className="col-4">
+          <div className="section p-5">
+            <div className="row">
+              <div className="col-sm-4">
                 <div className="text-center p-4 mb-4">
                   <div className="row row-cols-1 row-cols-ms-1 row-cols-md-1 row-cols-lg-2">
                     <div className="col-8 text-start">
@@ -130,7 +130,7 @@ function Home() {
                 </div>
                 <DescPokemon data={pokemonDex} />
               </div>
-              <div className="col-8">
+              <div className="col-sm-8">
                 <div className="row d-flex row-cols-1 row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
                   <CardPokemon
                     pokemon={pokeData}

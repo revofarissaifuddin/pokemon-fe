@@ -85,46 +85,12 @@ function Home() {
             </div>
           </div>
 
-          <div className="section p-5">
-            <div className="row row-cols-2">
-              <div className="col-8">
-                <div className="row d-flex row-cols-1 row-cols-lg-4 row-cols-md-3 row-cols-sm-2">
-                  <CardPokemon
-                    pokemon={pokeData}
-                    loading={loading}
-                    descPokemon={(pokemon) => setPokeDex(pokemon)}
-                  />
-                </div>
-                <div className="text-center">
-                  {prevUrl && (
-                    <button
-                      className="btn btn-primary btn-md me-4 mt-2 mb-2"
-                      onClick={() => {
-                        setPokeData([]);
-                        setUrl(prevUrl);
-                      }}
-                    >
-                      Previous
-                    </button>
-                  )}
-
-                  {nextUrl && (
-                    <button
-                      className="btn btn-primary btn-md mt-2 mb-2"
-                      onClick={() => {
-                        setPokeData([]);
-                        setUrl(nextUrl);
-                      }}
-                    >
-                      Next
-                    </button>
-                  )}
-                </div>
-              </div>
+          <div className="container section p-5">
+            <div className="row row-cols-xs-1 row-cols-sm-1 row-cols-md-2">
               <div className="col-4">
                 <div className="text-center p-4 mb-4">
-                  <div className="row row-cols-1 row-cols-md-1 row-cols-lg-2">
-                    <div className="col-8">
+                  <div className="row row-cols-1 row-cols-ms-1 row-cols-md-1 row-cols-lg-2">
+                    <div className="col-8 text-start">
                       <input
                         className="p-1 w-100"
                         type="text"
@@ -163,6 +129,40 @@ function Home() {
                   </div>
                 </div>
                 <DescPokemon data={pokemonDex} />
+              </div>
+              <div className="col-8">
+                <div className="row d-flex row-cols-1 row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+                  <CardPokemon
+                    pokemon={pokeData}
+                    loading={loading}
+                    descPokemon={(pokemon) => setPokeDex(pokemon)}
+                  />
+                </div>
+                <div className="text-center">
+                  {prevUrl && (
+                    <button
+                      className="btn btn-primary btn-md me-4 mt-2 mb-2"
+                      onClick={() => {
+                        setPokeData([]);
+                        setUrl(prevUrl);
+                      }}
+                    >
+                      Previous
+                    </button>
+                  )}
+
+                  {nextUrl && (
+                    <button
+                      className="btn btn-primary btn-md mt-2 mb-2"
+                      onClick={() => {
+                        setPokeData([]);
+                        setUrl(nextUrl);
+                      }}
+                    >
+                      Next
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
           </div>
